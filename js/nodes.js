@@ -1,30 +1,30 @@
 // min and max radius, radius threshold and percentage of filled circles
 var radMin = 5,
-  radMax = 125,
-  filledCircle = 60, //percentage of filled circles
-  concentricCircle = 20, //percentage of concentric circles
-  radThreshold = 15; //IFF special, over this radius concentric, otherwise filled
+  radMax = 175,
+  filledCircle = 20, //percentage of filled circles
+  concentricCircle = 80, //percentage of concentric circles
+  radThreshold = 25; //IFF special, over this radius concentric, otherwise filled
 
 //min and max speed to move
-var speedMin = 0.3,
+var speedMin = 1.0,
   speedMax = 2.0;
 
 //max reachable opacity for every circle and blur effect
-var maxOpacity = 0.6;
+var maxOpacity = 1.0;
 
 //default palette choice
 var colors = ['0,191,255', '220,20,60', '243,135,27', '163,56,171', '56,171,94', '40,100,60'],
   bgColors = ['0,191,255', '220,20,60', '243,135,27', '163,56,171', '56,171,94', '40,100,60'],
-  circleBorder = 10,
+  circleBorder = 20,
   backgroundLine = bgColors[0];
 var backgroundMlt = 0.85;
 
 //min distance for links
 var linkDist = Math.min(canvas.width, canvas.height) / 2.4,
-  lineBorder = 2.5;
+  lineBorder = 4;
 
 //most importantly: number of overall circles and arrays containing them
-var maxCircles = 12,
+var maxCircles = 8,
   points = [],
   pointsBack = [];
 
@@ -101,7 +101,7 @@ function drawCircle(ctx, circle) {
   }
   circle.x += circle.speedx;
   circle.y += circle.speedy;
-  if (circle.opacity < (circle.background ? maxOpacity : 1)) circle.opacity += 0.01;
+  if (circle.opacity < (circle.background ? maxOpacity : 0.4)) circle.opacity += 0.01;
   circle.ttl--;
 }
 
