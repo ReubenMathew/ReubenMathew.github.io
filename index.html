@@ -13,7 +13,7 @@
       <h2>Reuben Ninan</h2>
       <h3>Hello! I'm a software engineering undergrad at York University.<br><br>
 
-      I can work on projects that involve: <b>Robotics, 3D/2D Design, <font color='darkblue'>C++</font>/<font color="56,171,94">Java</font>/<font color="purple">Python</font>, DataOps/Machine Learning and Web Design.
+    <b>  I can work on projects that involve: Robotics, 3D/2D Design, <font color='darkblue'>C++</font>/<font color="56,171,94">Java</font>/<font color="purple">Python</font>, DataOps/Machine Learning and Web Design.
 </b>
 </h3>
 
@@ -31,12 +31,23 @@
 
 
   </div>
-  <canvas id="canvas" width="1950px" height="800px"></canvas>
-  <canvas id="canvasbg" width="1950px" height="800px"></canvas>
+  <canvas id="canvas" width="1950px" height = "800"></canvas>
+  <canvas id="canvasbg" width="1950px" height="0px"></canvas>
 <script src="https://unpkg.com/ionicons@4.4.7/dist/ionicons.js"></script>
   <script async type="text/javascript" src="js/nodes.js"></script>
 </body>
 
 </html>
+<script>
+  function resize(){
+    $("#canvas").outerHeight($(window).height()-$("#canvas").offset().top- Math.abs($("#canvas").outerHeight(true) - $("#canvas").outerHeight()));
+  }
+  $(document).ready(function(){
+    resize();
+    $(window).on("resize", function(){
+        resize();
+    });
+  });
+  </script>
 
 <!-- Color pallette curated by: Nourin Abd El Hadi & Aysha S. -->

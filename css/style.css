@@ -9,6 +9,7 @@ body {
   text-align: center;
   display: table;
   position:absolute;
+  flex-flow: column-reverse;
 }
 
 #title {
