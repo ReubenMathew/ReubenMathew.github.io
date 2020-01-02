@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "2c0f1ae1b3fade414f69ef5cbe9b5b82b8adcbdcfacb6306d8625287a795c6ac"
+            "sha256": "03de39ca1f64a738e1d45b5d65e3b31bde0f60ff93176e842c2220f6943f05d9"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -152,14 +152,5 @@
             "version": "==0.16.0"
         }
     },
-    "develop": {
-        "easydbio": {
-            "hashes": [
-                "sha256:1602cd0f942a26eb26f6a7529cd5e8c8dc455427b43c32a1936c72f2b3d25f44",
-                "sha256:ac3735e6b6f3bff6b9628d5c9add51db21b6899a098722af517456f3647fe0c0"
-            ],
-            "index": "pypi",
-            "version": "==0.3.2"
-        }
-    }
+    "develop": {}
 }
